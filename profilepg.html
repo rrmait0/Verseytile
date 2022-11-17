@@ -1,0 +1,305 @@
+<html> 
+<head>
+<style>
+
+            /* SEARCH BAR*/
+
+.topnav{
+  overflow:hidden;
+  background-color: #87e053;
+}
+
+
+.topnav input [type=text]{
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 30px;
+  font-size:10px;
+}
+
+.topnav img{
+
+  width:20px;
+  height: 20px;
+  background-color: #69a614;
+  object-fit: cover;
+
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .header a,.topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .header-right{
+    float:none;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+/*HEADER*/
+
+.header{
+  overflow:hidden;
+  background-color: #b3d343;
+  padding:20px 10px;
+}
+
+/*LOGO BUTTON*/
+
+.header a.logo{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: rgb(235, 236, 235);
+  color: black;
+}
+.header a.active {
+  background-color: #69a614;
+  color: #69a614;
+}
+.header-right {
+  float: right;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  list-style: none;
+  text-align: center;
+  border: 7px solid #599c3d;
+  background-color: #599c3d;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  list-style: none;
+  text-align: center;
+  float: center;
+  border: none;
+  outline: 3px solid rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 14px 27px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #DA9600;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  display: none;
+  padding: 6px 12px;
+  border: 5px solid rgb(5, 5, 5);
+  border-top: none;
+  display: block;
+}
+
+/* Right side boxes */
+
+
+
+
+.bio{
+
+  background: #b7d445;
+  float: right;
+  border: 5px solid #d8cc26;
+  border-radius: 8px;
+  width: 800px;
+  height: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+
+
+  .bioA{
+    width:inherit;
+    border-radius: 1px;
+    height:20px;
+    background-color: #c99c14;
+    margin-bottom: 16px;
+
+
+  }
+
+/*Left Hand Side*/
+
+.pfp{
+  background-color: #d8cc26;
+  width: 275px;
+  height: 275px;
+  position: absolute;
+  top: 1.7in; left:0.5in;
+  border-radius: 6%;
+  
+}
+
+.pfptop{
+  width:inherit;
+  height:30px;
+  background-color: #dbaa17;
+  margin-bottom: 16px;
+  text-align: center;
+  padding: 0px;
+
+
+}
+
+.pfpim{
+  height: 25px;
+  width: 25px;
+  background-color: #54cf0c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.pfpc{
+  margin: auto;
+  background-color: #b3d343;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  border-color: #54cf0c;
+  object-fit: cover;
+  overflow: hidden;
+
+}
+
+.interest{
+
+  height: 200px;
+  width: 320px;
+  background-color: #ccc;
+  float: left;
+  position: absolute;
+  top: 5in; left:0.5in;
+  text-align: center;
+  border-radius: 6%;
+}
+
+.interest_top{
+  width: inherit;
+  height:30px;
+  background-color: rgb(163, 161, 161);
+  text-align: center;
+  margin-bottom: 16px;
+
+}
+
+
+
+
+</style>
+            
+</head>
+
+<body style="background-color:#464646;">
+<!--HEADER-->
+<div class="header">
+    <a href="#default" class="logo">
+      
+      <img src="logobutton.jpg">
+  
+    </a>
+    <div class="header-right">
+      <input type="text" placeholder="Search"/>
+      <button type="submit" class="search-button">
+        <img src="magniftngglss.svg.png">
+      </button>
+        
+    </div>
+  
+    </div>
+    
+  </div>
+  
+  
+  
+  
+  <!--TABS-->
+  <div class="tab">
+    
+      <button class="tablinks" onclick="openPage(event, 'home')">HOME</button>
+    
+      <button class="tablinks" onclick="openPage(event, 'featured')">FEATURED</button>
+    
+      <button class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</button>
+    
+      <button class="tablinks" onclick="openPage(event, 'community')">COMMUNITY</button>
+    </div>
+
+<!--Main Page-->
+<!--Left Side -->
+
+<div class="pfp">
+  <div class="pfptop">
+    Welcome, X
+  </div>
+  <div class="pfpc">
+    <img src="capybaradrip.jpg">
+  </div>
+</div>
+
+<div class="interest";>
+  <div class="interest_top";>
+    Hobbies
+  </div>
+
+  -1<br>
+
+  -2<br>
+  -3<br>
+
+  
+</div>
+
+<!--Right side-->
+<div class="bio">
+  <div class="bioA">
+    Top Bio
+  </div>
+
+    Bio
+</div>
+<div class="bio">
+
+  <div class="bioA">
+    Top Bio2
+  </div>
+  Bio
+</div>
+
+
+
+
+
+
+  
+</body>
+</html>
