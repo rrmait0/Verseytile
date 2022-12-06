@@ -126,7 +126,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'main/static/'
+STATICFILES_DIRS = [
+    'main/static/',
+    ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

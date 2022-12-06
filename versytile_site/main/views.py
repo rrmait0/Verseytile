@@ -5,12 +5,17 @@ from .models import Forum, Discussion
 
 # Create your views here.
 def homepage(request):
+    return render(
+        request=request,
+        template_name='main/home.html',
+    )
+def forumpage(request):
 
     matching_Forum = Forum.objects.all()
     
     return render(
         request=request,
-        template_name='main/home.html',
+        template_name='main/forum.html',
         context={"objects": matching_Forum}
     )
 
@@ -21,7 +26,7 @@ def a_forum(request, a_forum: str):
     
     return render(
         request=request,
-        template_name='main/home.html',
+        template_name='main/forum.html',
         context={"objects": matching_Forum}
     )
 

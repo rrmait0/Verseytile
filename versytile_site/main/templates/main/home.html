@@ -1,26 +1,39 @@
 {% extends "main/header.html" %}
+{% load static %} 
+<!DOCTYPE html>
+<html> 
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'slideshow.js' %}"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+{% endblock %}
 {% block content %}
-    <div class="row display-flex justify-content-start">
-    {% for object in objects %}
-        <div class="col-lg-4 col-md-6 col-sm-12 mobiledevice">
-            <discussion class="media content-section customhover" style="height: 95%;">
-                <div class="media-body">
-                    <a href="/{{object.slug}}">
-                        <img class="img-fluid" src="/">
-                    </a>
-                    <div>
-                        <a class="discussion-title line-clamp-2 title-style" style="font-size: 22px" href="/{{object.slug}}">
-                            {{ object.title }}
-                        </a>
-                        <a href="/{{object.slug}}" style="text-decoration: none;">
-                            <p class="discussion-content line-clamp-5 subtitle-style">{{ object.subtitle }}</p>
-                        </a>
-                    </div>
-                </div>
-            </discussion>
-        </div>
-    {% endfor %}
-    </div>
-{% endblock content %}
+
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="{% static 'images\favicon.png' %}"></div>
+    <div class="swiper-slide"><img src="{% static 'images\favicon.png' %}"></div>
+    <div class="swiper-slide"><img src="{% static 'images\favicon.png' %}"></div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
 
 
+
+
+
+{% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>
