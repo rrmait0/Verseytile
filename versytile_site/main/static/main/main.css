@@ -1,9 +1,34 @@
-:root {
-  --footercolor: #87e502;
-  --navbarcolor: #87e502;
-  --btncolor: #87e502;
-  --socialcolor: #87e502;
-  --brightText: #ffffff;
+:root { 
+  --footercolor: #6eb905;
+  --navbarcolor: #79cc06;
+  --btncolor: #8dcc34;
+  --socialcolor: #e2ce1c;
+  --brightText: #0f270f;
+}
+.aspect-ratio-image{
+  position: relative;
+
+}
+
+.aspect-ratio-image::after{
+  display: block;
+  content: '';
+  /*Makes aspect ratio 16:9*/
+  padding-bottom: 56.25;
+}
+
+.aspect-ratio-image img{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-image{
+  width: 125px;
+  height: 125px;
+  padding: 5px;
 }
 
 .btncolor {
@@ -25,7 +50,7 @@
 }
 
 body {
-  background: #fafafa; 
+  background:#aaa; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section {
-  background: #ffffff;
+  background: #e4e0e0;
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
@@ -388,5 +413,4 @@ a.article-title:hover {
     clear: both;
   }
   /*BOXES*/
-  
   

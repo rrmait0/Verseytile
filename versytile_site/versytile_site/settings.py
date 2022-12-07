@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,6 +139,20 @@ AUTHENTICATION_BACKENDS = ['users.backends.EmailBackend']
 RECAPTCHA_PUBLIC_KEY = '6LfJIk8jAAAAAGxjKjaZL_O55ekuJFUvR48wGIak'
 RECAPTCHA_PRIVATE_KEY = '6LfJIk8jAAAAAPWN82U5o64cSh9UWMt9PO3CwxWm'
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# Emailing settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_FROM = 'kapuerto23@gmail.com'
+EMAIL_HOST_USER = 'kapuerto23@gmail.com'
+EMAIL_HOST_PASSWORD = 'ahfchpdpxpdfbsjj '
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+PASSWORD_RESET_TIMEOUT= 14400
 
 TINYMCE_DEFAULT_CONFIG = {
     'custom_undo_redo_levels': 100,

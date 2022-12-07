@@ -10,11 +10,13 @@ class Forum_admin(admin.ModelAdmin):
         'subtitle',
         'slug',
         'published',
+        'author',
+        'image',
     ]
 
 class Discussion_admin(admin.ModelAdmin):
     fieldsets =[
-        ("Header",{"fields": ['title','subtitle','Discussion_slug','a_forum']}),
+        ("Header",{"fields": ['title','subtitle','Discussion_slug','a_forum','author','image']}),
         ("Content", {"fields" : ['content','notes']}),
         ("Date",{"fields" : ['modified']}),
         
