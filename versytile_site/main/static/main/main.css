@@ -6,6 +6,16 @@
   --darkText: #000000;
 }
 
+@font-face {      
+	font-family: 'Comica Boom';
+      src: url('../fonts/comicaboom.otf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
 .btncolor {
   background-color: var(--btncolor) !important;
   color: var(--darkText) !important;
@@ -29,11 +39,20 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #000000;
 }
 
 .site-header .navbar-nav .nav-link {
-  color: var(--darkText);
+    color: var(--darkText);
+    font-size: 15px;
+    padding-left: 10px;
+    font-weight:bold;
+    border-right: 2px solid black;
+  
+}
+
+.site-header .navbar-nav:last-child .nav-item:last-child {
+    border-right: 0px;
 }
 
 .site-header .navbar-nav .nav-link:hover {

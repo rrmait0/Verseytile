@@ -1,39 +1,79 @@
 {% extends "main/header.html" %}
 {% load static %} 
 <!DOCTYPE html>
-<html> 
+<html>
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'slideshow.js' %}"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<style>
+    body {
+        background-color:#7E7E7E;
+    }
+    .swiper-button-prev {
+        color: black;
+    }
+
+    .swiper-button-next {
+        color: black;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #B4D35B;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+</style>
 {% endblock %}
 {% block content %}
-
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="{% static 'images\favicon.png' %}"></div>
-    <div class="swiper-slide"><img src="{% static 'images\favicon.png' %}"></div>
-    <div class="swiper-slide"><img src="{% static 'images\favicon.png' %}"></div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
-
-
-
-
-
-{% endblock %}
+<div class="swiper-desc">
+    <!-- swiper description here -->
+</div>
+    {% endblock %}
+    {% block extrascripts %}
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+    {% endblock %}
 </body>
 </html>
