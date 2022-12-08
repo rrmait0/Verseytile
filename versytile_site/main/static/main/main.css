@@ -16,6 +16,113 @@
     src: url('../fonts/Montserrat-Regular.ttf');
 }
 
+.aspect-ratio-image{
+  position: relative;
+
+}
+
+#announcementTitleBar {
+    width: 100%;
+    height: 100px;
+    background: #449C4B;
+    font-family: 'Montserrat';
+    color: white;
+    font-size: 50px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#announcementDescBar {
+	width: 100%;
+	height: 200px;
+	background: #FFC73D;
+	padding-left: 25%;
+	padding-right: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#annDescText {
+    width: 100%;
+    text-align:center;
+    font-family: Montserrat;
+}
+
+.feature-videos-home {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+.feature-articles-home {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+
+#homeDivider {
+    width: 100%;
+    height: 100px;
+    background: #449C4B;
+}
+.footer {
+    width: 100%;
+    height: 300px;
+    font-family: Montserrat;
+    background: #B4D35B;
+}
+    .swiper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        font-family: Montserrat;
+        background: #B4D35B;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
+.card-body {
+    background: #7E7E7E;
+
+}
+.aspect-ratio-image::after {
+  display: block;
+  content: '';
+  /*Makes aspect ratio 16:9*/
+  padding-bottom: 56.25;
+}
+
+.aspect-ratio-image img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-image {
+  width: 125px;
+  height: 125px;
+  padding: 5px;
+}
+
 .btncolor {
   background-color: var(--btncolor) !important;
   color: var(--darkText) !important;
@@ -35,7 +142,7 @@
 }
 
 body {
-  background: #fafafa; 
+  background: #7E7E7E; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header .navbar-nav .nav-link {
     color: var(--darkText);
-    font-size: 15px;
+    font-size: 20px;
     padding-left: 10px;
     font-weight:bold;
     border-right: 2px solid black;
@@ -56,8 +163,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
+  background-color: #B4D35B;
   border-radius: 10%;
 }
 

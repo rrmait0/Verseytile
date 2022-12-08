@@ -58,7 +58,7 @@
   float: left;
   width: 50%;
   padding: 10px;
-  
+
 }
 
 /* Clear floats after the columns */
@@ -161,7 +161,7 @@ h2{text-align: center;}
 <!--HEADER-->
 <div class="header">
   <a href="#default" class="logo">
-    
+
     <img src="logobutton.jpg">
 
   </a>
@@ -170,11 +170,11 @@ h2{text-align: center;}
     <button type="submit" class="search-button">
       <img src="magniftngglss.svg.png">
     </button>
-      
+
   </div>
 
   </div>
-  
+
 </div>
 
 
@@ -182,13 +182,13 @@ h2{text-align: center;}
 
 <!--TABS-->
 <div class="tab">
-  
+
     <button class="tablinks" onclick="openPage(event, 'home')">HOME</button>
-  
+
     <button class="tablinks" onclick="openPage(event, 'featured')">FEATURED</button>
-  
+
     <button class="tablinks" onclick="openPage(event, 'videos')">VIDEOS</button>
-  
+
     <button class="tablinks" onclick="openPage(event, 'community')">COMMUNITY</button>
 </div>
 
@@ -199,7 +199,7 @@ h2{text-align: center;}
   <div class="column" style="background-color:#aaa;">
     <div id="form"> 
       <h2> <u>User Login</u> </h2>
-      
+
         <p>
          <form action="{% url 'addInDiscussion' %}" method="POST">
          {% csrf_token %}
@@ -207,9 +207,9 @@ h2{text-align: center;}
          <input type="submit" class="btn btn-success" value="submit">
          </form>
         </p>
-     
+
     </div>
-    
+
   </div>
 
   <div class="column" style="background-color:#aaa;">
@@ -226,4 +226,3 @@ h2{text-align: center;}
 
 </body>
 </html>
-
